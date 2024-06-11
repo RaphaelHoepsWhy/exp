@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils"
 import React, { FC } from "react"
-import GlitchImage from "./components/GlitchImage"
+import GlitchImage from "./components/GlitchImage/GlitchImage"
 
 export type pageProps = {}
 

@@ -74,6 +74,11 @@ const config: Config = {
         glitch2,
         glitch3,
       },
+      animation: {
+        glitch1: "glitch1 1s infinite linear alternate ",
+        glitch2: "glitch2 0.5s infinite linear alternate",
+        glitch3: "glitch3 1.5s infinite linear alternate",
+      },
     },
   },
   plugins: [],
