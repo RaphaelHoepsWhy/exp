@@ -30,7 +30,10 @@ export default function VideoPlayer(props: VideoPlayerProps) {
 
   return (
     <div
-      className={cn("aspect-image overflow-hidden rounded-md", props.className)}
+      className={cn(
+        "aspect-image cursor-pointer overflow-hidden rounded-md",
+        props.className,
+      )}
       onMouseEnter={play}
       onMouseLeave={stop}
     >
