@@ -14,7 +14,10 @@ const HomePage: FC<pageProps> = ({}) => {
         <div className="pb-16" />
         <h1 className={cn("mb-8 text-xl text-lime-500")}>Digital</h1>
 
-        <VideoPlayer poster="video/original.png" />
+        <VideoPlayer poster="video/original.png" video="/video/output.webm" />
+        <div className="pb-16" />
+
+        <VideoPlayer poster="video/robots.png" video="/video/robots.webm" />
       </div>
     </div>
   )

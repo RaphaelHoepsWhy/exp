@@ -3,10 +3,9 @@ import { cn } from "@/lib/utils"
 import { useRef } from "react"
 
 export interface VideoPlayerProps {
-  mp4?: string
-  webm?: string
   poster: string
   className?: string
+  video: string
 }
 
 export default function VideoPlayer(props: VideoPlayerProps) {
@@ -45,7 +44,7 @@ export default function VideoPlayer(props: VideoPlayerProps) {
         playsInline={true}
         poster={props.poster}
       >
-        <source src={"/video/output.webm"} type={"video/webm"} />
+        <source src={props.video} type={"video/webm"} />
       </video>
     </div>
   )
