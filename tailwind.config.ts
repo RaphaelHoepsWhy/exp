@@ -1,181 +1,72 @@
 import type { Config } from "tailwindcss"
-import { createDynamicFontStyle } from "./lib/typography"
 
 const config: Config = {
   content: [
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./modules/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./lib/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     screens: {
-      sm: "640px",
       md: "768px",
       lg: "1024px",
       xl: "1280px",
-      "2xl": "1440px",
-      "3xl": "1600px",
-      "4xl": "1920px",
-    },
-    colors: {
-      primary1: {
-        DEFAULT: "#1A1A1A",
-        inverse: "#FFFFFF",
-      },
-      primary2: {
-        DEFAULT: "#1A1A1A",
-        inverse: "#FFFFFF",
-      },
-      primary3: {
-        DEFAULT: "#1A1A1A",
-        inverse: "#FFFFFF",
-      },
-      secondary1: {
-        DEFAULT: "#FF0000",
-        inverse: "#FFFFFF",
-      },
-      secondary2: {
-        DEFAULT: "#FF0000",
-        inverse: "#FFFFFF",
-      },
-      secondary3: {
-        DEFAULT: "#FF0000",
-        inverse: "#FFFFFF",
-      },
-      tertiary1: {
-        DEFAULT: "yellow",
-        inverse: "#000000",
-      },
-      tertiary2: {
-        DEFAULT: "yellow",
-        inverse: "#000000",
-      },
-      tertiary3: {
-        DEFAULT: "yellow",
-        inverse: "#000000",
-      },
-      white: "#FFFFFF",
-      black: "#000000",
-      gray: {
-        100: "#F5F5F5",
-        200: "#E5E5E5",
-        300: "#D4D4D4",
-        400: "#A3A3A3",
-        500: "#737373",
-        600: "#525252",
-        700: "#404040",
-        800: "#262626",
-        900: "#171717",
-      },
+      xxl: "1440px",
     },
     fontFamily: {
-      primary: ["var(--font-primary)"],
-      secondary: ["var(--font-secondary)"],
+      sans: ["var(--font-inter)"],
+      mono: ["var(--font-source-code-pro)"],
     },
     extend: {
-      fontSize: {
-        h1: createDynamicFontStyle({
-          minFontSize: 40,
-          maxFontSize: 80,
-          minPercentage: 3,
-          maxPercentage: 5,
-          minLineHeight: 80,
-          maxLineHeight: 160,
-          maxPageWidth: 1920,
-          fontWeight: 300,
-        }),
-        h2: createDynamicFontStyle({
-          minFontSize: 28,
-          maxFontSize: 56,
-          minPercentage: 3,
-          maxPercentage: 5,
-          minLineHeight: 32,
-          maxLineHeight: 64,
-          maxPageWidth: 1920,
-          fontWeight: 300,
-        }),
-        h3: "",
-        h4: "",
-        h5: "",
-        h6: "",
-        p1: [
-          "",
-          {
-            letterSpacing: "",
-            lineHeight: "",
-            fontWeight: "",
-          },
-        ],
-        p2: "",
-        p3: "",
-        p4: "",
-        button: [
-          "",
-          {
-            letterSpacing: "",
-            lineHeight: "",
-            fontWeight: "",
-          },
-        ],
-        o1: [
-          "",
-          {
-            letterSpacing: "",
-            lineHeight: "",
-            fontWeight: "",
-          },
-        ],
-        o2: [
-          "",
-          {
-            letterSpacing: "",
-            lineHeight: "",
-            fontWeight: "",
-          },
-        ],
-        o3: [
-          "",
-          {
-            letterSpacing: "",
-            lineHeight: "",
-            fontWeight: "",
-          },
-        ],
-        deco1: [
-          "",
-          {
-            letterSpacing: "",
-            lineHeight: "",
-            fontWeight: "",
-          },
-        ],
-        deco2: [
-          "",
-          {
-            letterSpacing: "",
-            lineHeight: "",
-            fontWeight: "",
-          },
-        ],
-        deco3: [
-          "",
-          {
-            letterSpacing: "",
-            lineHeight: "",
-            fontWeight: "",
-          },
-        ],
-        quote: [
-          "",
-          {
-            letterSpacing: "",
-            lineHeight: "",
-            fontWeight: "",
-          },
-        ],
+      colors: {
+        pink: {
+          50: "#fff0fb",
+          100: "#ffe3fa",
+          200: "#ffc6f6",
+          300: "#ff98ec",
+          400: "#ff58dc",
+          500: "#ff27c9",
+          600: "#ff00aa",
+          700: "#df0089",
+          800: "#b80071",
+          900: "#980360",
+          950: "#5f0036",
+        },
+        lime: {
+          50: "#edfff8",
+          100: "#d5fff2",
+          200: "#aeffe4",
+          300: "#70ffd1",
+          400: "#2bfdb7",
+          500: "#00ffaa",
+          600: "#00c07b",
+          700: "#009664",
+          800: "#067551",
+          900: "#076045",
+          950: "#003725",
+        },
+        aqua: {
+          50: "#eafffe",
+          100: "#cbfffe",
+          200: "#9effff",
+          300: "#5bfcff",
+          400: "#00eeff",
+          500: "#00d1e5",
+          600: "#00a7c0",
+          700: "#03849b",
+          800: "#0d697d",
+          900: "#105769",
+          950: "#033a49",
+        },
       },
-      animation: {
-        "fade-in-up": "textFadeInUp 1.2s ease-out",
+      aspectRatio: {
+        image: "1.618 / 1",
+        video: "16 / 9",
+        screenshot: "16 / 9",
+      },
+      backgroundImage: {
+        "gradient-radial":
+          "radial-gradient(closest-side, var(--tw-gradient-stops))",
       },
     },
   },

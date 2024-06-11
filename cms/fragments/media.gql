@@ -1,6 +1,0 @@
-fragment video on UploadVideoField {
-  streamingUrl
-  muxPlaybackId
-  muxAssetId
-  mp4Url
-}
