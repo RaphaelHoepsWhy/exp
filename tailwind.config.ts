@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss"
+import { glitch1, glitch2, glitch3 } from "./keyframes"
 
 const config: Config = {
   content: [
@@ -67,6 +68,11 @@ const config: Config = {
       backgroundImage: {
         "gradient-radial":
           "radial-gradient(closest-side, var(--tw-gradient-stops))",
+      },
+      keyframes: {
+        glitch1,
+        glitch2,
+        glitch3,
       },
     },
   },

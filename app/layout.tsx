@@ -14,7 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${sourceCodePro.variable}`}>
-      <body className="bg-neutral-900 font-mono text-lime-500">{children}</body>
+      <body className="bg-neutral-900 p-32 font-mono text-lime-500">
+        {children}
+      </body>
     </html>
   )
 }
